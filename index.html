@@ -274,7 +274,7 @@ var subjectObject = {
 				<td>Location</td>
 				<td>
 				<div class="dropdown" name="Location">
-  				<Select name="Location">	
+  				<Select name="Location" placeholder="Please select the Location">	
 					<Option Value="Location-1">Location 1</Option>
 					<Option Value="Location-2">Location 2</Option>
 					<Option Value="Location-3">Location 3</Option>
@@ -303,6 +303,22 @@ var subjectObject = {
 				<td><input type="text" name="Description" placeholder="Enter Detail"></td>
 
 			</tr>
+
+			<tr>
+				<td>Conveyance Use</td>
+				<!--<td><input type="text" name="Conveyance Use" placeholder="Enter City Name"></td>-->
+				<td><select name="Conveyance Use" id="Conveyance Use" placeholder="Please Select Conveyance Type Used">
+   	 			<option value="By Bike" selected="selected">By Bike</option>
+				<option value="By Bus" selected="selected">By Bus</option>
+				<option value="By Train" selected="selected">By Train</option>
+				<option value="By Air" selected="selected">By Air</option>
+				<option value="By Auto" selected="selected">By Auto</option>
+				<option value="By Car" selected="selected">By Car</option>
+  				</select></td>	
+				<td>State</td>
+				<td><input type="text" name="State" placeholder="Enter State Name"></td>
+			</tr>
+
 
 			<tr>
 				<td>Hotel Expense</td>
