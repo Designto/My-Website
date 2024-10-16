@@ -413,7 +413,7 @@ var subjectObject = {
 			document.getElementById('imageInput').addEventListener('change',function(event) {
 			const fileInput =event.target;
 			const file = fileInput.files[0];
-			if(file){ if(file.type.startsWith('image/')) { const reader = new FileReader();
+			if(file){ if(file.type.startsWith('image/*')) { const reader = new FileReader();
 			reader.onload=function(e) { const previewImage = document.getElementById('imagePreview');
 			previewImage.src=e.target.result;
 			previewImage.style.display ='block';
