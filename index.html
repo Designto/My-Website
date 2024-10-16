@@ -407,25 +407,19 @@ var subjectObject = {
 				<td><input type="Text" name="Outsource Person Name" placeholder="If Required,Enter Outsource Person Name"></td>
 				<td><!--%TimeStamp%-->15-10-2024 3:33 PM<!----></td>
 				<td><input type="Submit" Value="Submit" accesskey="S" ></td>
-		
 			</tr>
-
-
-		</table>
-		</form>
-		<script>
-
-		document.getElementById('imageInput').addEventListener('change',function(event) {
-
-		const fileInput =event.target;
-		const file = fileInput.files[0];
-		if(file){ if(file.type.startsWith('image/')) { const reader = new FileReader();
-		reader.onload=function(e) { const previewImage = document.getElementById('imagePreview');
-		previewImage.src=e.target.result;
-		previewImage.style.display ='block';
-		}
+	
+			<script>
+			document.getElementById('imageInput').addEventListener('change',function(event) {
+			const fileInput =event.target;
+			const file = fileInput.files[0];
+			if(file){ if(file.type.startsWith('image/')) { const reader = new FileReader();
+			reader.onload=function(e) { const previewImage = document.getElementById('imagePreview');
+			previewImage.src=e.target.result;
+			previewImage.style.display ='block';
+			}
 				reader.readAsDataURL(file);
-		}
+			}
 			else{
 				alert("Please select a valid image file(JPEG, PNG, etc.).");
 				document.getElementById('imagePreview').style.display = 'none';
@@ -436,6 +430,9 @@ var subjectObject = {
 			});
 		
 		</script>
+
+		</table>
+		</form>
 		
 		</body>
 
