@@ -202,7 +202,7 @@ var subjectObject = {
 
 	<body stype="Bodybg-color:#EAEEE9">
 		
-		<form action="https://script.google.com/a/macros/designstool.net/s/AKfycbxeECt_A1pXJtiHoJ-8kgRR_ZgnVKCjQORSiCCtABC5Fzkn8IZvEZMByKQ8HFKO0txf/exec" method="POST" ID= "form1">
+		<form action="https://script.google.com/a/macros/designstool.net/s/AKfycbxeECt_A1pXJtiHoJ-8kgRR_ZgnVKCjQORSiCCtABC5Fzkn8IZvEZMByKQ8HFKO0txf/exec" method="POST" ID= "form1" enctype="multipart/form-data">
 				
 				
 		<table align="Center" Bgcolor="#EAEEE9" width=80% Font-color="#FFFFFF" Font-family="Times New Roman">
@@ -360,7 +360,7 @@ var subjectObject = {
 				<td>Upload Image</td>
 				<td><input type="File"  id="imageInput"  name="Upload Image" accept="image/*">
 				<div>
-				<img id="imagePreview" src="#" alt="Image preview will appear here" style=maxwidth:300px;">
+				<img id="imagePreview" src="image/*" alt="Image preview will appear here" style="maxwidth:300px;">
 				</div>
 				</td>
 			</tr>
@@ -409,28 +409,7 @@ var subjectObject = {
 				<td><input type="Submit" Value="Submit" accesskey="S" ></td>
 			</tr>
 	
-			<script>
-	
-			document.getElementById('imageInput').addEventListener('change',function(event) {
-			const fileInput =event.target;
-			const file = fileInput.files[0];
-			if(file){ if(file.type.startsWith('image/*')) { const reader = new FileReader();
-			reader.onload=function(e) { const previewImage = document.getElementById('imagePreview');
-			previewImage.src=e.target.result;
-			previewImage.style.display ='block';
-			}
-				reader.readAsDataURL(file);
-			}
-			else{
-				alert("Please select a valid image file(JPEG, PNG, etc.).");
-				document.getElementById('imagePreview').style.display = 'none';
-				}
-			else{ document.getElementById('imagePreview').style.display = 'none';
-			}
-
-			});
-		
-		</script>
+			
 
 		</table>
 		</form>
