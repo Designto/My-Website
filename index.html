@@ -358,7 +358,11 @@ var subjectObject = {
 				<td>Other Misc. Expense</td>
 				<td><input type="text" name="Other Misc. Expense" placeholder="Enter Total Other Expense"></td>
 				<td>Upload Image</td>
-				<td><input type="File" multiple name="Upload Image" webkitdirectory mozdirectory accept="image/*"></td>
+				<td><input type="File"  id="imageInput"  name="Upload Image" accept="image/*">
+				<div>
+				<img id="imagePreview" src="#" alt="Image preview will appear here" style=maxwidth:300px;">
+				</div>
+				</td>
 			</tr>
 
 			<tr>
@@ -409,6 +413,30 @@ var subjectObject = {
 
 		</table>
 		</form>
+		<script>
+
+		document.getElementById('imageInput').addEventListener('change',function(event) {
+
+		const fileInput =event.target;
+		const file = fileInput.files[0];
+		if(file){ if(file.type.startsWith('image/')) { const reader = new FileReader();
+		reader.onload=function(e) { const previewImage = document.getElementById('imagePreview');
+		previewImage.src=e.target.result;
+		previewImage.style.display ='block';
+		}
+				reader.readAsDataURL(file);
+		}
+			else{
+				alert("Please select a valid image file(JPEG, PNG, etc.).");
+				document.getElementById('imagePreview').style.display = 'none';
+				}
+			else{ document.getElementById('imagePreview').style.display = 'none';
+			}
+
+			});
+		
+		</script>
+		
 		</body>
 
 </html>
