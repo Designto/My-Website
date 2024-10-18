@@ -21,7 +21,7 @@ document.getElementById('form1').onsubmit = function(event) {
                     const imageUrl = reader.result;
 
                     // Send the image URL to the Google Apps Script web app
-                    fetch('https://designto.github.io/My-Website/', {
+                    fetch('https://script.google.com/a/macros/designstool.net/s/AKfycbxeECt_A1pXJtiHoJ-8kgRR_ZgnVKCjQORSiCCtABC5Fzkn8IZvEZMByKQ8HFKO0txf/exec', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                         body: 'imageUrl=' + encodeURIComponent(imageUrl)
