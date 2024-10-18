@@ -90,8 +90,11 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 					<Option Value ="In-Time" name="In-Time">In-Time</Option>
 					<Option Value ="Out-Time" name="Out-Time">Out-Time</Option>
 					<Option Value ="On Leave" name="On Leave">On Leave</Option>
-										
-				<td style=" text-align: Left; width: 25%"></td>
+				<td style=" text-align: Left; width: 25%"><input type="File"  id="CameraInput"  name="Upload Image" accept="image/*" Capture="camera">
+				<div style=" text-align: Left; width: 25%">
+				<img id="imagePreview" src=" " alt="Image preview will appear here" style="maxwidth:300px;">
+				</div>
+				</td>
 				<td style=" text-align: Left; width: 25%"></td>
 			</tr>
 			<tr>
@@ -228,7 +231,7 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 				<td style=" text-align: Left; width: 25%">Other Misc. Expense</td>
 				<td style=" text-align: Left; width: 25%"><input type="text" name="Other Misc. Expense" placeholder="Enter Total Other Expense"></td>
 				<td style=" text-align: Left; width: 25%">Upload Image</td>
-				<td style=" text-align: Left; width: 25%"><input type="File"  id="CameraInput"  name="Upload Image" accept="image/*" Capture="camera">
+				<td style=" text-align: Left; width: 25%"><input type="File"  id="Uploadimg"  name="Upload Image" accept="image/*">
 				<div style=" text-align: Left; width: 25%">
 				<img id="imagePreview" src=" " alt="Image preview will appear here" style="maxwidth:300px;">
 				</div>
