@@ -284,7 +284,7 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 		const files = fileInput.files;
 		Array.from(files).forEach(file =>
 		{
-			const reader=new Filereader();
+			const reader=new FileReader();
 			read.onload=function(e)
 			{
 				const img = document.createElement('img');
