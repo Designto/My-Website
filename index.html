@@ -274,26 +274,26 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 			</table>
 		</form>
 
-		<img Class="center" id="imagePreview" src="" alt="Image Preview" style="max-width: 300px; max-height: 300px; display: none;">
-			
+		<div Class="preview-box" id="preview-box"></div>
 <script>
         const fileInput = document.getElementById('fileInput');
-        const imagePreview = document.getElementById('imagePreview');
+        const previewBox = document.getElementById('preview-box');
 
         fileInput.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    imagePreview.src = event.target.result;
-                    imagePreview.style.display = 'block'; // Show the image
-                };
-                reader.readAsDataURL(file); // Convert the file to a base64 string
-
-            } else {
-                imagePreview.src = '';
-                imagePreview.style.display = 'none'; // Hide the image if no file is selected
-            }
+		previewBox.InnerHTML='';
+		const files = fileInput.files;
+		Array.from(files).forEach(file =>
+		{
+			const reader=new Filereader();
+			read.onload=function(e)
+			{
+				const img = document.createElement('img');
+				img.src=e.target.result;
+				previewBox.appendChild(img);
+			};
+			
+			reader.readDataURL(img);	
+		});
         });
     </script>
 </body>
