@@ -280,19 +280,19 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
         const previewBox = document.getElementById('preview-box');
 
         fileInput.addEventListener('change', function() {
-		previewBox.InnerHTML='';
+		previewBox.innerHTML='';
 		const files = fileInput.files;
 		Array.from(files).forEach(file =>
 		{
 			const reader=new FileReader();
-			read.onload=function(e)
+			reader.onload=function(e)
 			{
 				const img = document.createElement('img');
-				img.src=e.target.result;
+				img.src = e.target.result;
 				previewBox.appendChild(img);
 			};
 			
-			reader.readDataURL(file);	
+			reader.readAsDataURL(file);	
 		});
         });
     </script>
