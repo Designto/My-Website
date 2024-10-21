@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <base target="_top">
 <meta Charset="UTF-8">	
@@ -10,31 +10,25 @@
 <img scr="https://github.com/Designto/My-Website/blob/main/Expense%20report.jpg?raw=true"></img>
 </a>
 <script>
-document.getElementById('form1').onsubmit = function(event) {
-            event.preventDefault();
-            const fileInput = event.target.elements.image;
-            const file = fileInput.files[0];
+        const fileInput = document.getElementById('fileInput');
+        const imagePreview = document.getElementById('imagePreview');
 
+        fileInput.addEventListener('change', function() {
+            const file = this.files[0];
             if (file) {
                 const reader = new FileReader();
-                reader.onloadend = function() {
-                    const imageUrl = reader.result;
-
-                    // Send the image URL to the Google Apps Script web app
-                    fetch('https://script.google.com/a/macros/designstool.net/s/AKfycbxeECt_A1pXJtiHoJ-8kgRR_ZgnVKCjQORSiCCtABC5Fzkn8IZvEZMByKQ8HFKO0txf/exec', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: 'imageUrl=' + encodeURIComponent(imageUrl)
-                    })
-                    .then(response => response.text())
-                    .then(data => console.log(data))
-                    .catch(error => console.error('Error:', error));
+                reader.onload = function(event) {
+                    imagePreview.src = event.target.result;
+                    imagePreview.style.display = 'block'; // Show the image
                 };
-                reader.readAsDataURL(file);
-            }
-        };
+                reader.readAsDataURL(file); // Convert the file to a base64 string
 
-</script>
+            } else {
+                imagePreview.src = '';
+                imagePreview.style.display = 'none'; // Hide the image if no file is selected
+            }
+        });
+    </script>	
 
 </head>
 
@@ -48,7 +42,7 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
     }
 .DropdownBox
   {
-	width: 87%;
+      width: 87%;
       padding: 1px;
       font-size: medium;
       margin-bottom: 5px;
@@ -231,9 +225,9 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 				<td style=" text-align: Left; width: 25%">Other Misc. Expense</td>
 				<td style=" text-align: Left; width: 25%"><input type="text" name="Other Misc. Expense" placeholder="Enter Total Other Expense"></td>
 				<td style=" text-align: Left; width: 25%">Upload Image</td>
-				<td style=" text-align: Left; width: 25%"><input type="File"  id="Uploadimg"  name="Upload Image" accept="image/*">
-				<div style=" text-align: Left; width: 25%">
-				<img id="imagePreview" src=" " alt="Image preview" style="maxwidth:100px;">
+				<td style=" text-align: Left; width: 25%"><input type="file"  id="fileInput"  name="Upload Image" accept="image/*">
+				<div style=" text-align: Left; width: 25%">              	
+				<img id="imagePreview" src="" alt="Image Preview" style="max-width: 300px; max-height: 300px; display: none;">
 				</div>
 				</td>
 			</tr>
