@@ -36,10 +36,24 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 
 .center
         {
-            display: block;
+	    display: block;
             margin-right: auto;
             margin-left: auto;
         }
+.preview-box
+    {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1px;
+    }
+.preview-box img
+    {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border: 2px solid #ccc;
+    }	
+	
 
 </Style>
 
@@ -209,7 +223,7 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 				<td style=" text-align: Left; width: 25%">Other Misc. Expense</td>
 				<td style=" text-align: Left; width: 25%"><input type="text" name="Other Misc. Expense" placeholder="Enter Total Other Expense"></td>
 				<td style=" text-align: Left; width: 25%">Upload Image</td>
-				<td style=" text-align: Left; width: 25%"><input type="file" multiple id="fileInput"  name="Upload Image" accept="image/*">
+				<td style=" text-align: Left; width: 25%"><input type="file"  id="fileInput"  name="Upload Image" multiple accept="image/*">
 				            	
 			</td>
 			</tr>
