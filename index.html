@@ -138,40 +138,40 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 
 			<tr>
 				<td style=" text-align: Left; width: 25%">Project Name</td>
-				<td style=" text-align: Left; width: 25%"><input type="text" name="Project Name" placeholder="Enter Project Name"></td>
+				<td style=" text-align: Left; width: 25%"><input type="text" name="Project Name" placeholder="Enter Project Name" required></td>
 				<!--<td><select name="Project Name" id="Project Name">-->
    	 			<!--<option value="" selected="selected">Please select Project code</option>-->
   				<!--</select></td>-->	
 				<td style=" text-align: Left; width: 25%">Store Code</td>
-				<td style=" text-align: Left; width: 25%"><input type="text" name="Store Code" placeholder="Enter Store Code"></td>		
+				<td style=" text-align: Left; width: 25%"><input type="text" name="Store Code" placeholder="Enter Store Code" required></td>		
 				</tr>
 	
 			<tr>
-				<td style=" text-align: Left; width: 25%">Type of Work</td>
-				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Recce" name="Type of Work" value="Recce">Recce</td>
-				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Installation" name="Type of Work" value="Installation">Installation</td>
-				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Maintenance" name="Type of Work" value="Maintenance">Maintenance</td>
+				<td style=" text-align: Left; width: 25%" >Type of Work</td>
+				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Recce" name="Type of Work" value="Recce" required>Recce</td>
+				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Installation" name="Type of Work" value="Installation" required>Installation</td>
+				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Maintenance" name="Type of Work" value="Maintenance" required>Maintenance</td>
 			</tr>
 
 			<tr>	
 				<td style=" text-align: Left; width: 25%"></td>
-				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Audit" name="Type of Work" value="Audit">Audit</td>
-				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Other Miscellaneous Work" name="Type of Work" value="Other Miscellaneous Work">Other Misc. Work</td>
+				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Audit" name="Type of Work" value="Audit" required>Audit</td>
+				<td style=" text-align: Left; width: 25%"><input type="checkbox" id="Other Miscellaneous Work" name="Type of Work" value="Other Miscellaneous Work" required>Other Misc. Work</td>
 				<td style=" text-align: Left; width: 25%"></td>
 			</tr>
 
 			<tr>
 				<td style=" text-align: Left; width: 25%">City</td>
-				<td style=" text-align: Left; width: 25%"><input type="text" name="City" placeholder="Enter City Name"></td>
+				<td style=" text-align: Left; width: 25%"><input type="text" name="City" placeholder="Enter City Name" required></td>
 				<td style=" text-align: Left; width: 25%">State</td>
-				<td style=" text-align: Left; width: 25%"><input type="text" name="State" placeholder="Enter State Name"></td>
+				<td style=" text-align: Left; width: 25%"><input type="text" name="State" placeholder="Enter State Name" required></td>
 			</tr>
 
 			<tr>
 				<td style=" text-align: Left; width: 25%">Location</td>
 				<td style=" text-align: Left; width: 25%">
 				<div class="dropdown" name="Location">
-  				<Select class="DropdownBox" name="Location">
+  				<Select class="DropdownBox" name="Location" required>
 					<Option Value="" placeholder="Please Select Location">Select Location</Option>
 					<Option Value="Location-1" >Location 1</Option>
 					<Option Value="Location-2">Location 2</Option>
@@ -199,13 +199,13 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 
 				<td style=" text-align: Left; width: 25%">Description</td>
 				<!--<td style=" text-align: Left; width: 25%"><input type="text" name="Description" placeholder="Enter Detail"></td>-->
-				<td style=" text-align: Left; width: 25%"><textarea class="TextArea" id="Textbox1" name="Description" placeholder="Enter All Types of Details Here" ></textarea></td>	
+				<td style=" text-align: Left; width: 25%"><textarea class="TextArea" id="Textbox1" name="Description" placeholder="Enter All Types of Details Here" required></textarea></td>	
 			</tr>
 
 			<tr>
 				<td style=" text-align: Left; width: 25%">Conveyance Used</td>
 				<!--<td><input type="text" name="Conveyance Use" placeholder="Enter City Name"></td>-->
-				<td style=" text-align: Left; width: 25%"><select class="DropdownBox" name="Conveyance Use" id="Conveyance Use">
+				<td style=" text-align: Left; width: 25%"><select class="DropdownBox" name="Conveyance Use" id="Conveyance Use" required>
 				<Option Value="" placeholder="Please select type of Conveyance Used">Select type of Conveyance Used</Option>
    	 			<option value="By Bike">By Bike</option>
 				<option value="By Bus">By Bus</option>
@@ -215,7 +215,7 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 				<option value="By Car">By Car</option>
   				</select></td>	
 				<td style=" text-align: Left; width: 25%">Amount Paid</td>
-				<td style=" text-align: Left; width: 25%"><input type="text" name="Amount Paid for Conveyance" placeholder="Enter the Amount Paid for Conveyance"></td>
+				<td style=" text-align: Left; width: 25%"><input type="text" name="Amount Paid for Conveyance" placeholder="Enter the Amount Paid for Conveyance" required></td>
 			</tr>
 
 
@@ -241,7 +241,7 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 
 				<td style=" text-align: Left; width: 25%">Field Boy Name</td>
 				<td style=" text-align: Left; width: 25%">
-				<Select class="DropdownBox" name="Field Boy Name">
+				<Select class="DropdownBox" name="Field Boy Name" required>
 					<Option Value ="">Select Your Name</Option>
 					<Option Value ="Sarver Ali" name="Sarver Ali">Sarver Ali </Option>
 					<Option Value ="Gautam" name="Gautam">Gautam</Option>
