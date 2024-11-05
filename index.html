@@ -304,6 +304,28 @@ Label, input[type="text"],input[type="file"],input[type="email"], input[type="da
 
             });
     </script>
+	
+<script>
+        function sortDropdown() {
+            let select = document.getElementById("Fieldboy");
+            let options = Array.from(select.options);
+
+            // Sort the options alphabetically
+            options.sort((a, b) => a.text.localeCompare(b.text));
+
+            // Remove all current options from the dropdown
+            select.innerHTML = "";
+
+            // Add the sorted options back to the dropdown
+            options.forEach(option => select.add(option));
+        }
+        sortDropdown();
+
+    </script>
+
+
+	
+	
 </body>
 
 </html>
